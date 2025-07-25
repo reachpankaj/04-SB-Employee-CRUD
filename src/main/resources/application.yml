@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: 04-SB-Employee-CURD
+
+  datasource:
+    username: root
+    password: Pk?87@#%
+    url: jdbc:mysql://localhost:3306/sbms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
