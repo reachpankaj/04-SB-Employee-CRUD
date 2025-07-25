@@ -1,8 +1,11 @@
 package com.pankaj.rest;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +23,14 @@ public class EmployeeRestController {
 	public ResponseEntity<String> createEmployee(@RequestBody Employee employee){
 		String status = employeeService.upsert(employee);
 		return new ResponseEntity<>(status, HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/employees")
+	public ResponseEntity<List<Employee>> getAllEmployee(){
+		
+		List<Employee> employeeList = employeeService.getAllData();
+		return new ResponseEntity<>(employeeList, HttpStatus.OK);
+		
 	}
 
 }
