@@ -21,7 +21,7 @@ spring-boot-crud-example
 |-- pom.xml
 Step 1: Add Dependencies
 Add the following dependencies to your pom.xml file:
-
+```php
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,6 +49,7 @@ Add the following dependencies to your pom.xml file:
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+```
 Step 2: Create the Spring Boot Application Class
 // src/main/java/com/example/SpringBootCrudExampleApplication.java
 
