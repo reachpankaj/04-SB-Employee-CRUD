@@ -10,5 +10,7 @@ public interface EmployeeService {
 	public Integer getById(Integer empId);
 	public List<Employee> getAllData();
 	public String deleteById(Integer empId);
+	
+	public String saveEmployees(List<Employee> employee);
 
 }
