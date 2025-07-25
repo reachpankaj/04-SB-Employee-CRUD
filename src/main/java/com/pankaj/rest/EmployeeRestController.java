@@ -32,5 +32,11 @@ public class EmployeeRestController {
 		return new ResponseEntity<>(employeeList, HttpStatus.OK);
 		
 	}
+	
+	@PostMapping("/employees")
+	public ResponseEntity<String> addEmployees(@RequestBody List<Employee> employees){
+		String status = employeeService.saveEmployees(employees);
+		return new ResponseEntity<>(status, HttpStatus.CREATED);
+	}
 
 }
