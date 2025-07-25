@@ -29,7 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Override
 	public List<Employee> getAllData() {
 		
-		return null;
+		return employeeRepo.findAll();
 	}
 
 	@Override
